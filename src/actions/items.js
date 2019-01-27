@@ -14,7 +14,6 @@ export const setItems = () => async (dispatch) => {
     dispatch(setItemsRequest());
     try {
         const response = await axios.get('/api/items');
-        console.log(response.data);
         dispatch(setItemsSuccess({ items: response.data }));
         dispatch(setModelsItems(response.data));
     } catch (e) {
