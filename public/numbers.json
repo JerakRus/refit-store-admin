@@ -1,0 +1,20 @@
+[
+  {
+    "id": 32,
+    "title": "555-55-55",
+    "firm": "megafon",
+    "price": 1500,
+    "description": "text",
+    "model": "",
+    "addCount": 0
+  },
+  {
+    "id": 33,
+    "title": "555-55-56",
+    "firm": "megafon",
+    "price": 1500,
+    "description": "text",
+    "model": "",
+    "addCount": 0
+  }
+]
