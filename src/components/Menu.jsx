@@ -38,16 +38,16 @@ export default class MenuTop extends Component {
                             &nbsp; Создать товар
                         </Menu.Item>
                     </Link>
-                    <Menu.Item fitted="vertically"  link href="https://api.whatsapp.com/send?phone=79999899947&text=" target="_blank">
+                    <Menu.Item  link href="https://api.whatsapp.com/send?phone=79999899947&text=" target="_blank">
                         <Icon name='whatsapp square' color="green" fitted />
                     </Menu.Item>
-                    <Menu.Item fitted="vertically"  link href="https://vk.com/refitstore" target="_blank">
+                    <Menu.Item  link href="https://vk.com/refitstore" target="_blank">
                         <Icon name='vk' color="blue" fitted />
                     </Menu.Item>
-                    <Menu.Item fitted="vertically" link href="https://www.instagram.com/refitstore_official/" target="_blank" >
+                    <Menu.Item  link href="https://www.instagram.com/refitstore_official/" target="_blank" >
                         <Icon name='instagram' color="purple" fitted />
                     </Menu.Item>
-                    <Menu.Item fitted="vertically" link href="mailto:RefitStore47@mail.ru" target="_blank" >
+                    <Menu.Item  link href="mailto:RefitStore47@mail.ru" target="_blank" >
                         <Icon name='mail' color="blue" fitted />
                     </Menu.Item>
                 </Menu.Menu>
