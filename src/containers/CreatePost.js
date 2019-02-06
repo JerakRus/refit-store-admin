@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
-import { withRouter} from "react-router-dom";
-import CreateItem from '../components/body/CreateItem';
-import { addItem } from '../actions/item';
+import { withRouter } from "react-router-dom";
+import CreatePost from '../components/body/CreatePost';
+import { addPost } from '../actions/post';
 import { switchPage } from "../actions/menu";
 
 const mapStateToProps = state => {
@@ -12,11 +12,11 @@ const mapStateToProps = state => {
 };
 
 const actions = {
-    addItem,
+    addPost,
     switchPage,
 };
 
 export default withRouter(connect(
     mapStateToProps,
     actions,
-)(CreateItem));
+)(CreatePost));

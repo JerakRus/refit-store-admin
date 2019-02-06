@@ -32,8 +32,14 @@ export default class MenuTop extends Component {
                 </Menu.Item>
                 </Link>
                 <Menu.Menu position="right">
+                    <Link to='/createPost'>
+                        <Menu.Item as='div' name="CreatePost" active={menuPage === 'CreatePost'} onClick={this.handleItemClick('CreatePost')} position='right'>
+                            <Icon name='plus' color="green"/>
+                            &nbsp; Создать пост
+                        </Menu.Item>
+                    </Link>
                     <Link to='/createItem'>
-                        <Menu.Item as='div' name="Cart" active={menuPage === 'CreateItem'} onClick={this.handleItemClick('CreateItem')} position='right'>
+                        <Menu.Item as='div' name="CreateItem" active={menuPage === 'CreateItem'} onClick={this.handleItemClick('CreateItem')} position='right'>
                             <Icon name='plus' color="red"/>
                             &nbsp; Создать товар
                         </Menu.Item>

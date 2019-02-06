@@ -14,7 +14,7 @@ export default class ItemShop extends React.Component {
 
     render() {
         const { item } = this.props;
-        const mediaLibrary = 'http://195.133.146.22:3000';
+        const mediaLibrary = '//195.133.146.22:3000';
         const path = item.image ? `${mediaLibrary}${item.image}`: null;
         return (
         <Card {...this.props.siteColor}>

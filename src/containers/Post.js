@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import ItemShop from '../components/body/ItemShop';
-import { deleteItem } from "../actions/item";
+import Post from '../components/body/Post';
+import { deletePost } from "../actions/post";
 
 const mapStateToProps = (state) => {
     const props = {
@@ -11,10 +11,10 @@ const mapStateToProps = (state) => {
 };
 
 const actions = {
-    deleteItem,
+    deletePost,
 };
 
 export default withRouter(connect(
     mapStateToProps,
     actions,
-)(ItemShop));
+)(Post));

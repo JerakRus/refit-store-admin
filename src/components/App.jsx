@@ -4,10 +4,12 @@ import { Switch, Route } from "react-router-dom";
 
 
 import MenuContainer from '../containers/Menu';
-import Home from "./body/Home";
+import HomeContainer from "../containers/Home";
 import Contacts from "./body/Contacts";
-import CreateItem from "../containers/CreateItem";
-import UpdateItem from '../containers/UpdateItem';
+import CreateItemContainer from "../containers/CreateItem";
+import UpdateItemContainer from '../containers/UpdateItem';
+import CreatePostContainer from "../containers/CreatePost";
+import UpdatePostContainer from '../containers/UpdatePost';
 import ShopContainer from "../containers/Shop";
 import Logo from './Logo';
 import Footer from './Footer';
@@ -17,8 +19,9 @@ import Footer from './Footer';
 
 class App extends Component {
     componentWillMount()  {
+        this.props.setPosts();
         this.props.setItems();
-        //this.props.history.push('/');
+        this.props.history.push('/');
     }
 
     render() {
@@ -27,10 +30,12 @@ class App extends Component {
             <Logo />
             <MenuContainer />
             <Switch>
-                <Route path='/' exact component={Home} />
+                <Route path='/' exact component={HomeContainer} />
                 <Route path='/shop' component={ShopContainer} />
-                <Route path='/createItem' component={CreateItem} />
-                <Route path='/updateItem/:type/:id' component={UpdateItem} />
+                <Route path='/createItem' component={CreateItemContainer} />
+                <Route path='/updateItem/:type/:id' component={UpdateItemContainer} />
+                <Route path='/createPost' component={CreatePostContainer} />
+                <Route path='/updatePost/:id' component={UpdatePostContainer} />
                 <Route path='/contacts' component={Contacts} />
             </Switch>
             <Footer {...this.props.siteColor} />

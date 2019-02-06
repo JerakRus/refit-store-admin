@@ -30,16 +30,14 @@ export const deleteItemSuccess = createAction('DELETE_ITEM_SUCCESS');
 export const deleteItemFailure = createAction('DELETE_ITEM_FAILURE');
 
 export const deleteItem = (item) => async dispatch => {
-    console.log(item);
     dispatch(deleteItemRequest());
     const path = `/api/items/${item._id}`;
     try {
         const res = await axios.delete(path);
         console.log(res.data);
-        console.log(item);
         dispatch(deleteItemSuccess(item));
     } catch (e) {
-        alert(`не удалось удалить, попробуйте еще раз ${e}`);
+        alert(`не удалось удалить элемент, попробуйте еще раз ${e}`);
         dispatch(deleteItemFailure());
     }
 };

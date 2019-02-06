@@ -7,9 +7,9 @@ import _ from 'lodash';
 class CreateItem extends React.Component {
 
     createOrder = values => {
-        console.log(this.props);
         this.props.addItem(values);
         this.props.reset();
+        this.props.switchPage('Shop');
         this.props.history.push('/shop');
     }
 

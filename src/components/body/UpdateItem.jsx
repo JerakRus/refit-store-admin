@@ -6,7 +6,7 @@ import _ from 'lodash';
 
 class UpdateItem extends React.Component {
 
-    createOrder = values => {
+    updateItem = values => {
         this.props.updateItem(values);
         this.props.reset();
         this.props.history.push('/shop');
@@ -20,7 +20,7 @@ class UpdateItem extends React.Component {
         ];
         return (
             <Container text>
-                <Form widths='equal' onSubmit={this.props.handleSubmit(this.createOrder)}>
+                <Form widths='equal' onSubmit={this.props.handleSubmit(this.updateItem)}>
                     <label>Тип товара:</label>
                     <Field name='type' required
                            component={SelectField}
@@ -50,7 +50,7 @@ class UpdateItem extends React.Component {
                            component={TextAreaField}
                            label='Описание товара:'
                     />
-                    <Button type="submit" {...this.props.siteColor}>Изменить</Button>
+                    <Button type="submit" {...this.props.siteColor}>Сохранить</Button>
                 </Form>
             </Container>
         );
@@ -59,5 +59,4 @@ class UpdateItem extends React.Component {
 
 export default reduxForm({
     form: 'updatedItem',
-    enableReinitialize : true,
 })(UpdateItem);
