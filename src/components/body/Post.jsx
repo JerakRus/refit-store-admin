@@ -14,10 +14,11 @@ export default class Post extends React.Component {
 
     render() {
         const { post } = this.props;
+        const mediaLibrary = '//195.133.146.22:3000';
         return (
         <Segment size='large'>
             <Header as='h2'>{post.title}</Header>
-            {this.props.post.image && <Image centered src={`//localhost:3000${post.image}`}/>}
+            {this.props.post.image && <Image centered src={`${mediaLibrary}${post.image}`}/>}
             <p>
                 {post.text}
             </p>
