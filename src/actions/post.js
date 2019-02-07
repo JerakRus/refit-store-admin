@@ -1,6 +1,20 @@
 import { createAction } from 'redux-actions';
 import axios from 'axios';
 
+const formatDate = date => {
+
+    let dd = date.getDate();
+    if (dd < 10) dd = '0' + dd;
+
+    let mm = date.getMonth() + 1;
+    if (mm < 10) mm = '0' + mm;
+
+    let yy = date.getFullYear() % 100;
+    if (yy < 10) yy = '0' + yy;
+
+    return dd + '.' + mm + '.' + yy;
+};
+
 export const addPostRequest = createAction('ADD_POST_REQUEST');
 export const addPostSuccess = createAction('ADD_POST_SUCCESS');
 export const addPostFailure = createAction('ADD_POST_FAILURE');
@@ -12,7 +26,7 @@ export const addPost = (values) => async dispatch => {
     const item = {
         ...values,
         image,
-        date: new Date(),
+        date: formatDate(new Date()),
     };
     try {
         const res = await axios.post(path, item);
@@ -52,7 +66,7 @@ export const updatePost = (values) => async dispatch => {
     const item = {
         ...values,
         image,
-        date: new Date(),
+        date: formatDate(new Date()),
     };
     try {
         const res = await axios.put(path, item);

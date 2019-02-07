@@ -11,7 +11,6 @@ const postsHomePage = handleActions({
     [addPostSuccess](state, { payload }) {
         const newState = state.slice();
         newState.unshift(payload);
-        console.log(newState);
         return newState;
     },
     [deletePostSuccess](state, { payload: { _id } }) {
