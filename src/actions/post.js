@@ -12,6 +12,7 @@ export const addPost = (values) => async dispatch => {
     const item = {
         ...values,
         image,
+        date: new Date(),
     };
     try {
         const res = await axios.post(path, item);
@@ -51,6 +52,7 @@ export const updatePost = (values) => async dispatch => {
     const item = {
         ...values,
         image,
+        date: new Date(),
     };
     try {
         const res = await axios.put(path, item);

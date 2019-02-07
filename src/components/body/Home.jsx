@@ -5,7 +5,7 @@ import PostContainer from '../../containers/Post';
 
 const Home = (props) => {
     return (
-      <Container text>
+      <Container >
           {props.posts.map(post => <PostContainer key={post._id} post={post} />)}
       </Container>
     );
