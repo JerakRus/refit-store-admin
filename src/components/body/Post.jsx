@@ -20,7 +20,7 @@ export default class Post extends React.Component {
         <Segment.Group >
             <Segment padded size='large'>
                 <Header as='h2'>{post.title}</Header>
-                {this.props.post.image && <Image size='large' centered src={`${mediaLibrary}${post.image}`}/>}
+                {this.props.post.image && <Image centered src={`${mediaLibrary}${post.image}`}/>}
                 <p>
                     {post.text}
                 </p>
