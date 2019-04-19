@@ -11,12 +11,13 @@ const Home = (props) => {
     ];
     return (
       <Container >
-          <Container textAlign='center'>
-              <Paint data={arr} width={1000} height={500} animDuration={2000}/>
-          </Container>
           {props.posts.map(post => <PostContainer key={post._id} post={post} />)}
       </Container>
     );
 };
 
 export default Home;
+
+/* <Container textAlign='center'>
+    <Paint data={arr} width={1000} height={500} animDuration={2000}/>
+</Container> */
